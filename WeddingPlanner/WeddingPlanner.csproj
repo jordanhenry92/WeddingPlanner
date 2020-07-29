@@ -137,9 +137,13 @@
     <Compile Include="Migrations\202007291915000_InitialModel.designer.cs">
       <DependentUpon>202007291915000_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007291923130_ChangedPersonToAttendee.cs" />
+    <Compile Include="Migrations\202007291923130_ChangedPersonToAttendee.designer.cs">
+      <DependentUpon>202007291923130_ChangedPersonToAttendee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
-    <Compile Include="Models\Person.cs" />
+    <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -301,6 +305,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202007291915000_InitialModel.resx">
       <DependentUpon>202007291915000_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007291923130_ChangedPersonToAttendee.resx">
+      <DependentUpon>202007291923130_ChangedPersonToAttendee.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

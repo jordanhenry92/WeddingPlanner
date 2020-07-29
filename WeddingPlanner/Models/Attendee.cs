@@ -6,7 +6,7 @@ using System.Web;
 
 namespace WeddingPlanner.Models
 {
-    public class Person
+    public class Attendee
     {
         public int Id { get; set; }
 

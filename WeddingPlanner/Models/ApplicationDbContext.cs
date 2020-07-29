@@ -8,7 +8,7 @@ namespace WeddingPlanner.Models
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Person> People { get; set; }
+        public DbSet<Attendee> Attendees { get; set; }
         public DbSet<Role> Roles { get; set; }
     }
 }
