@@ -9,7 +9,7 @@
 </p>
 
 <table id="attendees" class="table table-bordered table-hover">
-    <thead>
+    <thead class="thead-dark">
         <tr>
             <th>Name</th>
             <th>Email</th>
@@ -21,7 +21,7 @@
     @foreach (var attendee in Model)
     {
         <tr>
-            <td>@attendee.FirstName @attendee.LastName</td>
+            <td>@Html.ActionLink(attendee.FirstName + " " + attendee.LastName, "Edit", "Attendees", new { id = attendee.Id }, null)</td>
             <td>@attendee.Email</td>
             <td>@attendee.PhoneNumber</td>
             <td>@attendee.Role.Name</td>

@@ -1,0 +1,40 @@
+﻿@model WeddingPlanner.ViewModels.AttendeeFormViewModel
+@{
+    ViewBag.Title = "AttendeeForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p><h2>@Model.Attendee.FirstName  @Model.Attendee.LastName</h2></p>
+
+@using (Html.BeginForm("Save", "Attendees"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Attendee.FirstName)
+        @Html.TextBoxFor(m => m.Attendee.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Attendee.FirstName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Attendee.LastName)
+        @Html.TextBoxFor(m => m.Attendee.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Attendee.LastName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Attendee.Email)
+        @Html.TextBoxFor(m => m.Attendee.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Attendee.Email)
+    </div>    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Attendee.PhoneNumber)
+        @Html.TextBoxFor(m => m.Attendee.PhoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Attendee.PhoneNumber)
+    </div>    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Attendee.RoleId)
+        @Html.DropDownListFor(m => m.Attendee.RoleId, new SelectList(Model.Roles, "Id", "Name"), "Select Role", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Attendee.RoleId)
+    </div>
+    @Html.HiddenFor(m => m.Attendee.Id)
+
+    <button type="submit" class="btn btn-primary">Save</button>
+
+}
