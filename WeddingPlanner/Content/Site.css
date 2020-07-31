@@ -30,3 +30,8 @@ textarea {
 .btn {
     margin: 10px;
 }
+
+#attendee-button {
+    margin-left: 0px;
+    margin-bottom: 20px;
+}

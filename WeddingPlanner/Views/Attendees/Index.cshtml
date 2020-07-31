@@ -8,7 +8,7 @@
     <h2>Attendees</h2>
 </p>
 
-<button type="button" class="btn btn-dark">Add new attendee</button>
+@Html.ActionLink("New Attendee", "New", "Attendees", null, new { @id = "attendee-button", @class = "btn btn-dark"})
 
 
 <table id="attendees" class="table table-bordered table-hover">

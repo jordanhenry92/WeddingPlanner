@@ -6,6 +6,7 @@ using System.Data.Entity;
 using System.Web.Mvc;
 using WeddingPlanner.Models;
 using WeddingPlanner.ViewModels;
+using System.Web.Configuration;
 
 namespace WeddingPlanner.Controllers
 {
@@ -81,6 +82,19 @@ namespace WeddingPlanner.Controllers
             _context.SaveChanges();
 
             return RedirectToAction("Index", "Attendees");
+        }
+
+        // Returns a view of an uninstantiated customer
+        public ActionResult New()
+        {
+            var roles = _context.Roles.ToList();
+            var viewModel = new AttendeeFormViewModel
+            {
+                Attendee = new Attendee(),
+                Roles = roles
+            };
+
+            return View("AttendeeForm", viewModel);
         }
     }
 }
