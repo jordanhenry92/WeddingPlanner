@@ -24,7 +24,9 @@
     @foreach (var attendee in Model)
     {
         <tr>
-            <td>@Html.ActionLink(attendee.FirstName + " " + attendee.LastName, "Edit", "Attendees", new { id = attendee.Id }, null)</td>
+            <td><div>@Html.ActionLink(attendee.FirstName + " " + attendee.LastName, "Edit", "Attendees", new { id = attendee.Id }, null)</div>
+                <div>@Html.ActionLink("x", "Delete", "Attendees", new { id = attendee.Id }, new { @id = "delete-button", @class = "btn btn-dark" })</div>
+            </td>
             <td>@attendee.Email</td>
             <td>@attendee.PhoneNumber</td>
             <td>@attendee.Role.Name</td>

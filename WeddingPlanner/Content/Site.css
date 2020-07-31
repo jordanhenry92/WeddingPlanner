@@ -35,3 +35,8 @@ textarea {
     margin-left: 0px;
     margin-bottom: 20px;
 }
+
+#delete-button{
+    padding: 3px 8px 3px 10px;
+    justify-content: flex-end;
+}

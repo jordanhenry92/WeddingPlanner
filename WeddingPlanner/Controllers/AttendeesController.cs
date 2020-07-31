@@ -96,5 +96,18 @@ namespace WeddingPlanner.Controllers
 
             return View("AttendeeForm", viewModel);
         }
+
+        public ActionResult Delete(int id)
+        {
+            var attendee = _context.Attendees.SingleOrDefault(a => a.Id == id);
+
+            if (attendee == null)
+                return HttpNotFound();
+
+            _context.Attendees.Remove(attendee);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Attendees");
+        }
     }
 }
