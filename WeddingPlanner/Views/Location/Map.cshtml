@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Map";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p><h2>Location</h2></p>
+
+
+
+<div id="map"></div>
+<script>
+    function initMap() {
+        var loc = { lat: 45.4215, lng: -75.6972 };
+        var map = new google.maps.Map(document.getElementById('map'), { zoom: 10, center: loc });
+        var marker = new google.maps.Marker({ position: loc, map: map });
+    }
+</script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5uS9zyx5UJrB_i7f44YQM59JvnQkxTC4&callback=initMap"></script>

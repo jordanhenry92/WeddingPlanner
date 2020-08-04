@@ -20,12 +20,12 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Attendee.Email)
-        @Html.TextBoxFor(m => m.Attendee.Email, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Attendee.Email, new { @class = "form-control", @type="email" })
         @Html.ValidationMessageFor(m => m.Attendee.Email)
     </div>    
     <div class="form-group">
         @Html.LabelFor(m => m.Attendee.PhoneNumber)
-        @Html.TextBoxFor(m => m.Attendee.PhoneNumber, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Attendee.PhoneNumber, new { @class = "form-control", @type="tel" })
         @Html.ValidationMessageFor(m => m.Attendee.PhoneNumber)
     </div>    
     <div class="form-group">

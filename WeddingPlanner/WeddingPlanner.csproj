@@ -131,6 +131,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AttendeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -293,6 +294,7 @@
     <Content Include="Views\Attendees\Index.cshtml" />
     <Content Include="Views\Attendees\AttendeeForm.cshtml" />
     <Content Include="Views\Menu\Menu.cshtml" />
+    <Content Include="Views\Location\Map.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

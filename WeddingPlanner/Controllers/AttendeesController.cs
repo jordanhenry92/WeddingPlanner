@@ -97,6 +97,8 @@ namespace WeddingPlanner.Controllers
             return View("AttendeeForm", viewModel);
         }
 
+        // Deletes the specified attendee from the db
+        // TODO add a confirmation box for the user and fix button styling so its justified right
         public ActionResult Delete(int id)
         {
             var attendee = _context.Attendees.SingleOrDefault(a => a.Id == id);

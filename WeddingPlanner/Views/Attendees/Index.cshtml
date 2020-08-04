@@ -24,8 +24,11 @@
     @foreach (var attendee in Model)
     {
         <tr>
-            <td><div>@Html.ActionLink(attendee.FirstName + " " + attendee.LastName, "Edit", "Attendees", new { id = attendee.Id }, null)</div>
-                <div>@Html.ActionLink("x", "Delete", "Attendees", new { id = attendee.Id }, new { @id = "delete-button", @class = "btn btn-dark" })</div>
+            <td>
+                <div style="display: flex; align-items: center; ">
+                    @Html.ActionLink(attendee.FirstName + " " + attendee.LastName, "Edit", "Attendees", new { id = attendee.Id }, new { @style = "flex: 1;" })
+                    @Html.ActionLink("x", "Delete", "Attendees", new { id = attendee.Id }, new { @id = "delete-button", @class = "btn btn-dark" })
+                </div>
             </td>
             <td>@attendee.Email</td>
             <td>@attendee.PhoneNumber</td>

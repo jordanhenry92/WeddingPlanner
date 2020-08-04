@@ -40,3 +40,8 @@ textarea {
     padding: 3px 8px 3px 10px;
     justify-content: flex-end;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}
