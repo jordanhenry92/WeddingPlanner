@@ -33,6 +33,7 @@
         @Html.DropDownListFor(m => m.Attendee.RoleId, new SelectList(Model.Roles, "Id", "Name"), "Select Role", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.Attendee.RoleId)
     </div>
+    @Html.AntiForgeryToken()
     @Html.HiddenFor(m => m.Attendee.Id)
 
     <button type="submit" class="btn btn-primary">Save</button>

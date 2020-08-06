@@ -54,6 +54,7 @@ namespace WeddingPlanner.Controllers
 
         // Saves an edited attendee to the database and returns user to attendees list
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Attendee attendee)
         {
             if (!ModelState.IsValid)
